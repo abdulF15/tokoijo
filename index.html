@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TOKOIJO</title>
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- STYLE -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- icons -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="tokoijo">TokoIjo</h1>
+      <select id="kategori" name="kategori" class="kategori">
+        <option value="pilihan1">Kategori</option>
+        <option value="pilihan2">Kategori 2</option>
+        <option value="pilihan3">Kategori 3</option>
+        <option value="pilihan4">Kategori 4</option>
+      </select>
+
+      <div class="pencarian">
+        <label for="search" class="icon">
+          <i data-feather="search"></i>
+        </label>
+        <input
+          type="text"
+          class="search"
+          id="search"
+          placeholder="Pencarian tokoijo"
+        />
+      </div>
+
+      <a href="#" class="shopcart"><i data-feather="shopping-cart"></i></a>
+
+      <div class="login">
+        <a href="#" class="masuk">Masuk</a>
+        <a href="#" class="keluar">keluar</a>
+      </div>
+      <button class="hamburger-menu">
+        <i class="menu" data-feather="menu"></i>
+      </button>
+    </header>
+    <div class="clickmenu">
+      <select id="kategori" name="kategori" class="kategori-menu">
+        <option value="pilihan1">Kategori</option>
+        <option value="pilihan2">Kategori 2</option>
+        <option value="pilihan3">Kategori 3</option>
+        <option value="pilihan4">Kategori 4</option>
+      </select>
+      <a href="#" class="shopcart-menu"><i data-feather="shopping-cart"></i></a>
+      <div class="login-menu">
+        <a href="#" class="masuk-menu">Masuk</a>
+        <a href="#" class="keluar-menu">keluar</a>
+      </div>
+    </div>
+
+    <!-- slider -->
+    <section class="wrapper">
+      <i class="fa-solid fa-arrow-left button" id="prev"></i>
+      <div class="image-container">
+        <div class="carousel">
+          <img src="https://source.unsplash.com/1200x400/?code" alt="" />
+          <img src="https://source.unsplash.com/1200x400/?home" alt="" />
+          <img src="https://source.unsplash.com/1200x400/?computer" alt="" />
+          <img src="https://source.unsplash.com/1200x400/?coffe" alt="" />
+        </div>
+        <i class="fa-solid fa-arrow-right button" id="next"></i>
+      </div>
+    </section>
+
+    <section class="shop">
+      <div class="grid-container">
+        <div class="grid">
+          <img
+            class="img"
+            src="https://source.unsplash.com/300x200/?computer"
+            alt=""
+          />
+          <p class="deskripsi">Lorem ipsum dolor sit amet.</p>
+          <p class="harga">120k</p>
+          <button class="btn">+</button>
+        </div>
+        <div class="grid">
+          <img
+            class="img"
+            src="https://source.unsplash.com/300x200/?computer"
+            alt=""
+          />
+          <p class="deskripsi">Lorem ipsum dolor sit amet.</p>
+          <p class="harga">120k</p>
+          <button class="btn">+</button>
+        </div>
+        <div class="grid">
+          <img
+            class="img"
+            src="https://source.unsplash.com/300x200/?computer"
+            alt=""
+          />
+          <p class="deskripsi">Lorem ipsum dolor sit amet.</p>
+          <p class="harga">120k</p>
+          <button class="btn">+</button>
+        </div>
+        <div class="grid">
+          <img
+            class="img"
+            src="https://source.unsplash.com/300x200/?computer"
+            alt=""
+          />
+          <p class="deskripsi">Lorem ipsum dolor sit amet.</p>
+          <p class="harga">120k</p>
+          <button class="btn">+</button>
+        </div>
+        <div class="grid">
+          <img
+            class="img"
+            src="https://source.unsplash.com/300x200/?computer"
+            alt=""
+          />
+          <p class="deskripsi">Lorem ipsum dolor sit amet.</p>
+          <p class="harga">120k</p>
+          <button class="btn">+</button>
+        </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

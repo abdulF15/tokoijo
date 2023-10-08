@@ -1,0 +1,326 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, sans-serif;
+}
+body {
+  height: 5000px;
+}
+:root {
+  --color: rgb(10, 175, 84);
+}
+
+/* header */
+.header {
+  display: flex;
+  justify-content: space-around;
+  padding: 1.2rem;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 200;
+}
+.tokoijo {
+  color: var(--color);
+  font-weight: 900;
+}
+.pencarian {
+  padding: 0 0.5rem;
+}
+.pencarian .search {
+  width: 250px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #f2f2f2;
+  outline: none;
+}
+.search:hover {
+  border-color: #888;
+}
+.pencarian .icon {
+  display: inline-block;
+  padding-right: 0.5rem;
+  color: var(--color);
+}
+.kategori {
+  padding: 0.5rem;
+  border: 0;
+  font-weight: 600;
+  border-radius: 0.3rem;
+  background-color: #fff;
+  color: var(--color);
+  cursor: pointer;
+  text-decoration: none;
+}
+.kategori:hover {
+  background-color: var(--color);
+  color: #fff;
+  font-weight: 400;
+}
+.shopcart {
+  color: var(--color);
+  padding: 0.3rem;
+  cursor: pointer;
+}
+.login {
+  display: flex;
+  gap: 1rem;
+}
+.login a {
+  border: 1px solid var(--color);
+  padding: 0.5rem;
+  color: #fff;
+  background-color: var(--color);
+  border-radius: 0.3rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+.login .masuk {
+  color: var(--color);
+  background-color: #fff;
+}
+.hamburger-menu {
+  display: none;
+}
+.clickmenu {
+  display: none;
+}
+/* slider */
+.wrapper {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  height: 400px;
+  background: #fff;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.wrapper i.button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 36px;
+  width: 36px;
+  background-color: #343f4f;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 36px;
+  color: #fff;
+  font-size: 15px;
+  transition: all 0.3s linear;
+  z-index: 100;
+  cursor: pointer;
+}
+i.button:active {
+  transform: scale(0.94) translateY(-50%);
+}
+i#prev {
+  left: 25px;
+}
+i#next {
+  right: 25px;
+}
+.image-container {
+  height: 320px;
+  max-width: 1000px;
+  width: 100%;
+  overflow: hidden;
+}
+.image-container .carousel {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  transition: all 0.4s ease;
+}
+.carousel img {
+  height: 100%;
+  width: 100%;
+  border-radius: 18px;
+  border: 10px solid #fff;
+  object-fit: cover;
+}
+
+/* shop */
+.shop {
+  margin: 12rem 6rem;
+}
+.grid-container {
+  border-radius: 0.3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  justify-items: center;
+}
+.grid {
+  max-width: 300px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 0.3rem;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+.grid .img {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.grid .btn {
+  padding: 0.4rem 0.7rem;
+  border-radius: 0.3rem;
+  margin: 1rem 0;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  background-color: var(--color);
+}
+.grid .btn:hover {
+  scale: 1.2;
+}
+.grid .deskripsi {
+  margin: 0.5rem 0;
+}
+.grid .harga {
+  font-weight: 800;
+}
+
+/* responsive */
+/* Stil untuk desktop */
+@media (min-width: 992px) {
+  /* Aturan CSS untuk desktop dengan lebar lebih dari 992px */
+}
+
+/* Stil untuk tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Aturan CSS untuk tablet antara 768px dan 992px */
+  .header {
+    max-width: 990px;
+    padding: 1.5rem 0;
+  }
+  .wrapper {
+    max-width: 960px;
+    left: 0;
+  }
+  .image-container {
+    max-width: 950px;
+  }
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Stil untuk perangkat mobile */
+@media (max-width: 767px) {
+  /* Aturan CSS untuk perangkat mobile di bawah 768px */
+  .header {
+    max-width: 768px;
+  }
+  .kategori,
+  .shopcart,
+  .login {
+    display: none;
+  }
+  .wrapper {
+    max-width: 768px;
+    left: 0;
+  }
+  .image-container {
+    max-width: 700px;
+  }
+  .hamburger-menu {
+    display: block;
+    padding: 0.3rem 0.6rem;
+    color: var(--color);
+    cursor: pointer;
+    border: none;
+    background-color: #fff;
+  }
+  .hamburger-menu .menu {
+    scale: 1.5;
+  }
+  .hamburger-menu .menu:hover {
+    scale: 1.3;
+  }
+  .hamburger-menu.active {
+    border: 1px solid var(--color);
+  }
+  .clickmenu {
+    display: block;
+    /* margin-top: 5.5rem; */
+    margin-top: -11rem;
+    background-color: var(--color);
+    color: #fff;
+    transition: ease-in 0.3s;
+  }
+  .clickmenu.active {
+    margin-top: 5.5rem;
+  }
+  .clickmenu a,
+  .login-menu a {
+    display: block;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    color: #fff;
+  }
+  .login-menu {
+    display: flex;
+  }
+  .login-menu .masuk-menu:hover,
+  .keluar-menu:hover {
+    font-size: 1.2rem;
+  }
+  .kategori-menu {
+    padding: 0.5rem;
+    border: 0;
+    font-weight: 600;
+    border-radius: 0.3rem;
+    background-color: #fff;
+    color: var(--color);
+    cursor: pointer;
+    text-decoration: none;
+    margin: 0.5rem 1rem;
+  }
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .grid {
+    max-width: 800px;
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 460px) {
+  .header {
+    max-width: 460px;
+    display: block;
+  }
+  .header .tokoijo {
+    margin-bottom: 0.5rem;
+  }
+  .header.pencarian {
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
+  .header .hamburger-menu {
+    position: absolute;
+    top: 1.5rem;
+    right: 4.2rem;
+  }
+  .wrapper {
+    max-width: 460px;
+  }
+  .clickmenu.active {
+    margin-top: 9rem;
+  }
+}
